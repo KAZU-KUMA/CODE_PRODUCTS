@@ -1,0 +1,47 @@
+/* ===========================================================
+共通画面(ヘッダー、フッターなど)＊
+=========================================================== */
+body {
+  font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN";
+  width: 100%;
+  min-width: 375px;
+  /* min-width: 1000px; */
+}
+/* ロゴ画像 */
+.logo{
+  height: 45px;
+  width: 350px;
+}
+/* ナビゲーションバー */
+.navbar_header{
+  background-color: rgb(13, 40, 81);
+}
+.navbar_footer{
+  background-color: rgb(203, 203, 203);
+}
+.text-white:hover{
+  border:1px solid rgb(255, 255, 255);
+}
+.text_fotter{
+  color:rgb(120, 80, 59);
+}
+.text_fotter:hover{
+  color:rgb(74, 50, 37);
+}
+/* ハンバーガーメニュー */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar-light .navbar-toggler {
+  border-color: rgb(255, 255, 255);
+}
+/* フッタを最下部に固定 */
+.container {
+  min-height:100vh;
+}
+
+/* モーダルウィンドウ背景 */
+.modal-bg{
+  background-color:rgb(215, 242, 253);
+}
+

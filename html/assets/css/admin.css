@@ -1,0 +1,30 @@
+/* ===========================================================
+商品管理画面＊
+=========================================================== */
+/* 商品登録 */
+.add_item_form{
+  border: solid 1px #dddddd;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+/* 非公開背景 */
+.close_item {
+  background-color: #dddddd;
+}
+/* 画像サイズ */
+.item_image{
+  height: 150px;
+}
+/* 数量、価格フォーム */
+input[type=number]{
+  width: 200px;
+}
+/* 先頭へ */
+.top_page{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:none;
+  opacity:0.8;
+  z-index:10;
+}
