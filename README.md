@@ -15,7 +15,7 @@ pass: admin
 id: sampleuser  
 pass: password  　
 
-## 作成言語と開発環境
+## 使用言語と開発環境
 - 言語・・・HTML/CSS、JS、PHP、MySQL
 - ツール・・・GitHub(バージョン管理)、 Docker(LAMP環境)
 - OS・・・Mac
