@@ -4,16 +4,16 @@
 
 ![CODE PRODUCTS](https://user-images.githubusercontent.com/65232447/84732622-2150e300-afd7-11ea-8d8a-cec353284e66.png)
 
-## URLとログイン情報
-[URL]
-http://153.126.204.74//login.php
-[ログイン情報]
-管理者としてログイン
-id: admin
-pass: admin
-一般ユーザーとしてログイン
-id: sampleuser
-pass: password
+## URLとログイン情報  
+[URL]  
+http://153.126.204.74//login.php  
+[ログイン情報]  
+管理者としてログイン  
+id: admin  
+pass: admin  
+一般ユーザーとしてログイン  
+id: sampleuser  
+pass: password  　
 
 ## 作成言語と環境
 - 言語・・・HTML/CSS、JS、PHP、MySQL
