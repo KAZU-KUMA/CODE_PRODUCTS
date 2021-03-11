@@ -3,10 +3,10 @@
 // 定数＊
 // ===========================================================
 //DB接続情報
-define('DB_HOST', 'mysql');
-define('DB_NAME', 'sample');
-define('DB_USER', 'testuser');
-define('DB_PASS', 'password');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'ec_site');
+define('DB_USER', 'root');
+define('DB_PASS', 'kuma1234');
 define('DB_CHARSET', 'utf8');
 
 //ドキュメントルート取得

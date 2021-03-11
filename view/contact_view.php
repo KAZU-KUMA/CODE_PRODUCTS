@@ -44,5 +44,7 @@
       <input type="submit" value="戻る" class="btn btn-warning btn-block my-5">
     </form>  
   </div>
+<!-- フッター読み込み -->
+<?php include VIEW_PATH . 'templates/footer.php'; ?>
 </body>
 </html>

@@ -17,7 +17,7 @@
   <div class="container">
 <!-- <h1>ただいま製作中!!</h1> -->
 
-<p class="mb-0 font-weight-bold">こちらは機械部品を取り扱うオンライン販売システムです。</p>
+<h2 class="mb-0 font-weight-bold">こちらは機械部品を取り扱うオンライン販売システムです。</h2>
 <p><small>(模倣サイトのため、実際に商品を注文することはできませんので、ご注意ください。)</small></p>
 <dl>
   <dt>製作者</dt>
@@ -36,7 +36,7 @@
         <li>言語・・・HTML/CSS、PHP、MySQL</li>
         <li>フレームワーク、ライブラリ・・・ Bootsrtap、JQuery</li>       
         <li>ツール・・・GitHub(バージョン管理), Docker(LAMP環境)</li>
-        <li>OS・・・Mac</li>
+        <li>OS・・・MacOS</li>
       </ul>
     </dd>
   <p class="font-weight-bold">ソースコード(GitHub)　<a href="https://github.com/KAZU-KUMA/CODE_PRODUCTS">表示</a></p>

@@ -7,7 +7,7 @@
 <!-- コンテンツ -->
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a class="nav-link text_fotter text-nowrap" href="<?php print(SITE_GUIDE_URL);?>">サイトについて </a>
+      <a class="nav-link text_fotter text-nowrap" href="#<?php //print(SITE_GUIDE_URL);?>">サイトについて </a>
     </li>
     <li class="nav-item">
       <a class="nav-link text_fotter text-nowrap" href="<?php print(CONTACT_URL);?>">お問い合わせ</a></li>
@@ -15,7 +15,7 @@
     <li class="nav-item">
       <a class="nav-link text_fotter text-nowrap" data-toggle="modal" data-target="#modal1" href="#">管理人について</a>
       <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content modal-bg">
             <div class="modal-header">
               <h5 class="modal-title text-center" id="label1">　　PROFILE　〜About Me〜</h5>

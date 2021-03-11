@@ -22,43 +22,60 @@
     <?php if(empty($items) === false): ?>
       <?php foreach($items as $item): ?>
         <img src="<?php print(IMAGE_PATH . $item['image']);?>" class="item_image float-left col-md-4 mb-3">
-        <!-- <div class="table-responsive"> -->
-        <table class="table table-bordered text-center float-right col-md-8" >
+        <div class="table-responsive col-md-8">
+        <table class="table table-bordered text-center" >
           <tr>
             <td class="bg-light text-nowrap">商品名</td>
-            <td><?php print($item['name']); ?></td>
+            <td class="text-left">
+              <p class="mb-0 ml-2"><?php print($item['name']); ?></p>
+            </td>
           </tr>
           <tr>
             <td class="bg-light text-nowrap">価格</td>
-            <td><?php print(number_format($item['price'])); ?>円</td>
+            <td class="text-left">
+              <p class="mb-0 ml-2"><?php print(number_format($item['price'])); ?>円</p>
+            </td>
           </tr>
           <tr>
             <td class="bg-light text-nowrap">在庫数</td>
-            <td>
+            <td class="text-left">
               <?php if($item['stock'] >= DISPLAY_STOCK_MAX){ ?>
-                <p class="text-success mb-0">
+                <p class="text-success mb-0 ml-2">
                   <?php print('在庫多<br>残り'.$item['stock']); ?>個
                 </p>
               <?php }else if($item['stock'] < DISPLAY_STOCK_MAX 
               && $item['stock'] > DISPLAY_STOCK_MIN ){ ?>
-                <p class="text-danger mb-0">
+                <p class="text-danger mb-0 ml-2">
                   <?php print('残りわずか'.$item['stock']); ?>個<br>ご注文はお早めに!!
                 </p>
               <?php }else{ ?>
-                <p class="text-danger mb-0">現在売り切れです</p>
+                <p class="text-danger mb-0 ml-2">現在売り切れです</p>
               <?php } ?>
             </td>
           </tr>
           <tr>
             <td class="bg-light text-nowrap">商品説明</td>
             <td class="text-left">
-              <pre class="mb-0">
-                <?php print($item['explanation']); ?>
-              </pre>
+              <?php $text = $item['explanation'];?>
+              <?php
+                $ua=$_SERVER['HTTP_USER_AGENT'];
+                $browser = ((strpos($ua,'iPhone')!==false)||(strpos($ua,'Android')!==false));
+                  if ($browser === true){
+                  $browser = 'sp';
+                }
+                if($browser === 'sp'){
+              ?>
+                <!-- //スマホの場合に読み込むソースを記述 -->
+                <?php $textwrap = mb_wordwrap($text, 15, "\n", true);?>
+              <?php }else{ ?>
+                <!-- //タブレット・PCの場合に読み込むソースを記述 -->
+                <?php $textwrap = mb_wordwrap($text, 40, "\n", true);?>
+              <?php } ?>
+              <pre class="mb-0 ml-2"><?php print($textwrap); ?></pre>
             </td>
           </tr>
         </table>
-        <!-- </div> -->
+        </div>
       <?php endforeach; ?>
       <?php if($item['stock'] > 0){ ?>
         <form action="index_add_cart.php" method="post" class="mb-3">

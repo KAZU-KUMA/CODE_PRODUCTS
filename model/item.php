@@ -242,7 +242,7 @@ function is_valid_item_status($status){
   if(($status === ITEM_STATUS_OPEN || $status === ITEM_STATUS_CLOSE) === false){
     set_error('不正な処理です。');
   }else{
-  return true;
+    return true;
   }
 }
 
@@ -366,13 +366,13 @@ function delete_image($filename){
 ===========================================================*/
 function update_item_status($db, $item_id, $status){
 //エラーチェック(公開と非公開のみ)
-  if(is_valid_item_status($status) === false){
-    return false;
-  }else{
-//ステータス更新
+  if(is_valid_item_status($status) === true){
+    //ステータス更新
     $sql = "UPDATE items SET status = ? WHERE item_id = ? LIMIT 1";
     $params=[$status, $item_id];
     return execute_query($db, $sql, $params); 
+  }else{
+    return false;
   }
 }
 
@@ -384,12 +384,12 @@ function update_item_status($db, $item_id, $status){
 ===========================================================*/
 function update_item_stock($db, $item_id, $stock){
 //エラーチェック(未入力、数量制限、数字のみなど)
-  if(is_valid_item_stock($stock) === false){
-    return false;
-  }else{
+  if(is_valid_item_stock($stock) === true){
     $sql = "UPDATE items SET stock = ? WHERE item_id = ? LIMIT 1";
     $params=[$stock, $item_id];
     return execute_query($db, $sql, $params);
+  }else{
+    return false;
   }
 }
 
