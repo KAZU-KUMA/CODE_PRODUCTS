@@ -6,7 +6,7 @@
 
 ## URLとログイン情報  
 [URL]  
-http://153.126.204.74//login.php  
+https://kazuki-portfolio.work/login.php  
 
 [ログイン情報]  
 管理者としてログイン  
