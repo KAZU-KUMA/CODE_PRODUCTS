@@ -19,22 +19,22 @@
     <p>お問い合わせ内容をご入力の上、「送信」ボタンをクリックしてください。</p>
 <!-- メッセージ表示 -->
     <?php include VIEW_PATH . 'templates/messages.php'; ?>
-    <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQoGjWmqASxd6zpgdLrIj445VyyXM-J0a7ZDuh4-4U2iUPxA/formResponse" class="contact_form mx-auto mt-3">
+    <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeQoGjWmqASxd6zpgdLrIj445VyyXM-J0a7ZDuh4-4U2iUPxA/formResponse" class="contact_form mx-auto mt-3" id="form">
       <div class="form-group">
         <label for="name">名前 </label>
-        <input type="text" name="entry.2005620554"name="name" id="name" class="form-control" placeholder="Your Name">
+        <input type="text" name="entry.2005620554" id="name" class="form-control" placeholder="Your Name" required> 
       </div>
       <div class="form-group">
         <label for="email">メールアドレス </label>
-        <input type="email" name="entry.1045781291" id="email" class="form-control" placeholder="Your Email">
+        <input type="email" name="entry.1045781291" id="email" class="form-control" placeholder="Your Email" required>
       </div>
       <div class="form-group">
         <label for="subject">件名 </label>
-        <input type="text" name="entry.1166974658" id="subject" class="form-control" placeholder="Subject">
+        <input type="text" name="entry.1166974658" id="subject" class="form-control" placeholder="Subject" required>
       </div>
       <div class="form-group">
         <label for="contact">お問い合わせ内容</label>
-        <textarea class="form-control" name="entry.839337160" placeholder="messages..." id="contact" rows='6'></textarea>
+        <textarea class="form-control" name="entry.839337160" placeholder="messages..." id="contact" rows='6' required></textarea>
       </div>
       <input type="submit" value="送信" class="btn btn-primary btn-block">
       <input type="reset" value="リセット" class="btn btn-warning btn-block">
@@ -42,8 +42,13 @@
     <form action="index.php"  method="post">
       <input type="hidden" name="csrf_token" value="<?php print $token ?>">
       <input type="submit" value="戻る" class="btn btn-warning btn-block my-5">
-    </form>  
+    </form> 
+    <p class="end-message">お問い合わせありがとうございました</p>
+    <p class="false-message">送信失敗です</p> 
   </div>
+  <!-- js読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="<?php print(JS_PATH . 'main.js'); ?>"></script>
 <!-- フッター読み込み -->
 <?php include VIEW_PATH . 'templates/footer.php'; ?>
 </body>
